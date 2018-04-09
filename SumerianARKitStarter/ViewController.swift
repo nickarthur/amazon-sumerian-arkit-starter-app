@@ -17,7 +17,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
 
     // URL of the Sumerian scene.
-    private let sceneURL = URL(string: "https://d1550wa51vq95s.cloudfront.net/cab395b5e46b44f3affe4957fb04cf32.scene/?arMode=true")!
+    //private let sceneURL = URL(string: "https://d1550wa51vq95s.cloudfront.net/cab395b5e46b44f3affe4957fb04cf32.scene/?arMode=true")!
+    private let sceneURL = URL(string: "https://d1tsyd7599mesx.cloudfront.net/28057d3acb624d36a30d00db97293b9f.scene/?arMode=true")!
 
     private var cubeMaterials: [SCNMaterial]!
     private var sumerianConnector: SumerianConnector!
@@ -89,6 +90,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         grayMaterial.diffuse.contents = UIColor.gray;
         grayMaterial.locksAmbientWithDiffuse = true
 
-        cubeMaterials = [greenMaterial, redMaterial, blueMaterial, yellowMaterial, purpleMaterial, grayMaterial]
+        self.cubeMaterials = [greenMaterial, redMaterial, blueMaterial, yellowMaterial, purpleMaterial, grayMaterial]
     }
 }
